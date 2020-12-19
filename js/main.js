@@ -26,7 +26,7 @@ var main = new Vue({
   methods: {
     send: function(event){
       alert('住所は' + this.address);
-      axios.get('/api/?q=東京')
+      axios.get('/api/?q=埼玉')
       .then(response => {
         console.log(JSON.stringify(response.data));
       })
