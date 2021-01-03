@@ -6,7 +6,8 @@ var main = new Vue({
   methods: {
     send: function(event){
       // alert('住所は' + this.address);
-      axios.get('https://www.geocoding.jp/api/?q=埼玉県さいたま市')
+      axios.get('https://www.geocoding.jp/api/?q=埼玉県さいたま市'
+      , {withCredentials: true})
       .then(response => {
         console.log(JSON.stringify(response.data));
       })
